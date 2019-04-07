@@ -1,28 +1,43 @@
 <!doctype html>
 <html><head>
   <title>I like Sahara Desert ice cream</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
 </head><body>
 
-  <div id="app">
+<!--   <div id="app">
     <h1>{{ title }} </h1>
     <p>
       <div v-for="line in lines">{{ line }}</div><br>
     </p> </h1>
+  </div> -->
+  
+  <div id="container" v-for="i in range">
+    <img v-bind:src="imgAddress">
   </div>
 
   <script>
+    const range = n => Array.from({length: n}, (v, k) => k+1);
+    const imgAddress = "https://via.placeholder.com/800x450"
     const app = new Vue({
-      el: "#app",
+      el:"#container",
       data: {
-        title: "I like Sahara Desert ice cream",
-        lines: [
-          "Sometimes when I go to Miami,",
-          "I ask for a plane to the Sahara desert",
-          "and there I eat the tastiest ice cream",
-          "I have ever tried"
-        ]
+        range: range(10),
+        imgAddress
       }
     });
+//     const app = new Vue({
+//       el: "#app",
+//       data: {
+//         title: "I like Sahara Desert ice cream",
+//         lines: [
+//           "Sometimes when I go to Miami,",
+//           "I ask for a plane to the Sahara desert",
+//           "and there I eat the tastiest ice cream",
+//           "I have ever tried"
+//         ]
+//       }
+//     });
   </script>
 </body></html>
