@@ -12,10 +12,11 @@
       <div v-for="line in lines">{{ line }}</div><br>
     </p> </h1>
   </div> -->
-  
-  <div id="container" v-for="i in range">
-    <img v-bind:src="imgAddress">
-  </div>
+    <div id="container">
+      <div v-for="i in range">
+        <img v-bind:src="imgAddress">
+      </div>
+    </div>
 
   <script>
     const range = n => Array.from({length: n}, (v, k) => k+1);
