@@ -6,7 +6,7 @@
 
   <div id="app">
     <h1>{{ title }} </h1>
-    <p>{{ content.join('<br>') }} </h1>
+    <p v-for="line in lines">{{ line }} </h1>
   </div>
 
   <script>
@@ -14,7 +14,7 @@
       el: "#app",
       data: {
         title: "I like Sahara Desert ice cream",
-        content: [
+        lines: [
           "Sometimes when I go to Miami,",
           "I ask for a plane to the Sahara desert",
           "and there I eat the tastiest ice cream",
