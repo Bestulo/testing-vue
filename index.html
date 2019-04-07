@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head>
+<title>I like Sahara Desert ice cream</title>
+</head><body>
+
+<div id="app">
+<h1>{{ title }} </h1>
+<p>{{ content }} </h1>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+const app = new Vue({
+  el: "app",
+  data: {
+    title: "I like Sahara Desert ice cream",
+    content: [
+      "Sometimes when I go to Miami,",
+      + "I ask for a plane to the Sahara desert",
+      + "and there I eat the tastiest ice cream",
+      + "I have ever tried"
+    ].join('\n')
+  }
+</script>
+</body></html>
